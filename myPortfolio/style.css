@@ -1,0 +1,205 @@
+html{
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+@keyframes spanAnimate {
+  0%,
+  10% {
+    transform: translate(-100vw, 25vw);
+  }
+  90% {
+    transform: translateX(100px);
+  }
+  100% {
+  }
+}
+@keyframes photoAnimate {
+  0%,
+  10% {
+    transform: translate(-400px);
+  }
+  90%,
+  100% {
+    transform: translateY();
+  }
+}
+.main-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(./photosForDesign/bgcc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navbar-section {
+  width: 26%;
+  height: 100%;
+  animation: photoAnimate;
+  animation-duration: 3s;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-nav {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-nav a {
+  text-align: center;
+  border-radius: 25px;
+  text-decoration: none;
+  color: rgb(1, 131, 34);
+  font-size: 42px;
+  margin-top: 15px;
+  font-family: "Anton", sans-serif;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+.main-nav a:hover {
+  transform: translate(20px);
+  transition: all 2s;
+}
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  height: 4px;
+  background-color: rgb(1, 131, 34);
+  border-radius: 10px;
+  width: 0;
+  transition: all 0.5s;
+}
+.main-nav a:hover::after {
+  content: "";
+  width: 50%;
+}
+
+.entrance-section {
+  width: 73.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  animation: spanAnimate;
+  animation-duration: 3s;
+  background: transparent;
+}
+
+.anim-name-text span {
+  font-family: "Gajraj One", cursive;
+  color: rgb(21, 214, 244);
+  font-size: 90px;
+  text-shadow: 8px 8px 15px rgb(215, 79, 76);
+}
+.anim-name-text .second-span {
+  color: rgb(224, 232, 105);
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+.anim-name-text span:hover {
+  transform: rotate(360deg);
+  transition: all 2s;
+}
+@media screen and (max-width:1200px) {
+  .main-section{
+    
+    background-position-y: 0;
+  }
+  .main-nav a::after {
+    
+    left: 18px;
+    
+  }
+  .main-nav a:hover::after {
+    
+    width: 70%;
+  }
+  .main-nav .after-effect:hover::after {
+    
+    width: 100%;
+  }
+  .anim-name-text{
+    margin-left: 30px;
+    text-align: center;
+  }
+  .anim-name-text span{
+    font-size: 3.4rem;
+  }
+  .anim-name-text .second-span{
+    font-size: 2rem;
+  }
+
+}
+@media screen and (max-width:765px) {
+  .main-section{
+    
+    background-position-y: 0;
+  }
+  .anim-name-text{
+    text-align: center;
+  }
+  .anim-name-text span{
+    font-size: 3.4rem;
+  }
+  .anim-name-text .second-span{
+    font-size: 2rem;
+  }
+  .main-nav a::after {
+    
+    left: 10px;
+    
+  }
+  .main-nav a:hover::after {
+    
+    width: 85%;
+  }
+  .main-nav .after-effect:hover::after {
+    
+    width: 125%;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+ 
+  .main-nav a {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-family: "Anton", sans-serif;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+  }
+  .main-nav a::after {
+    
+    left: 10px;
+    
+  }
+  .main-nav a:hover::after {
+    
+    width: 70%;
+  }
+  .main-nav .after-effect:hover::after {
+    
+    width: 110%;
+  }
+  .anim-name-text{
+    margin-left: 20px;
+  }
+  .anim-name-text span {
+    font-size: 2rem;
+    text-shadow: 8px 8px 15px rgb(98, 98, 98);
+  }
+  .anim-name-text .second-span {
+    
+    font-size: 1.5rem;
+  }
+  
+  
+}
